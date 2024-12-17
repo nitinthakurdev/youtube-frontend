@@ -2,3 +2,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+:hover::-webkit-scrollbar-thumb{
+    @apply bg-gray-500 rounded-full
+}
+
+html {
+    @apply dark:text-white text-black dark:bg-black
+}
+
+
+.borders1 {
+    @apply border border-gray-300 dark:border-gray-800
+}
+
+.borders2 {
+    @apply border-2 border-gray-300 dark:border-gray-800
+}
+
+.bg-hovers {
+    @apply dark:bg-gray-800 bg-gray-100 dark:hover:bg-gray-700 hover:bg-gray-200 
+}
+
+.hovers {
+    @apply dark:hover:bg-gray-700 hover:bg-gray-200
+}
+

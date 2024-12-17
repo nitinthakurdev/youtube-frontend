@@ -1,1 +1,176 @@
-<p>layout works!</p>
+<header class="  sticky top-0 dark:bg-black bg-white">
+    <nav class="flex items-center justify-between py-2 px-5 relative ">
+        <div class="flex gap-3 sm:gap-5 ">
+            <svg class=" h-7 w-7" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20.75 7C20.75 7.41421 20.4142 7.75 20 7.75L4 7.75C3.58579 7.75 3.25 7.41421 3.25 7C3.25 6.58579 3.58579 6.25 4 6.25L20 6.25C20.4142 6.25 20.75 6.58579 20.75 7Z"
+                    fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20.75 12C20.75 12.4142 20.4142 12.75 20 12.75L4 12.75C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25L20 11.25C20.4142 11.25 20.75 11.5858 20.75 12Z"
+                    fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20.75 17C20.75 17.4142 20.4142 17.75 20 17.75L4 17.75C3.58579 17.75 3.25 17.4142 3.25 17C3.25 16.5858 3.58579 16.25 4 16.25L20 16.25C20.4142 16.25 20.75 16.5858 20.75 17Z"
+                    fill="currentColor" />
+            </svg>
+            <div class="flex gap-1">
+                <img src="/images/icon.png" class="h-7 w-7" />
+                <span class="text-lg font-medium">Youtube</span>
+            </div>
+        </div>
+
+        <div class="hidden items-center justify-center h-10 gap-3 lg:gap-5 md:flex ">
+            <div class="flex items-center justify-center h-full  ">
+                <input class="   md:w-[15rem] lg:w-[30rem]  z-10   rounded-s-full bg-transparent  h-full borders1 ps-5"
+                    placeholder="Search" />
+                <button title="Search"
+                    class="dark:bg-gray-900  bg-gray-100 h-full justify-center borders1 flex items-center rounded-e-full w-[70px]">
+
+                    <svg class="h-5 w-5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                            sketch:type="MSPage">
+                            <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-256.000000, -1139.000000)"
+                                fill="currentColor">
+                                <path
+                                    d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z"
+                                    id="search" sketch:type="MSShapeGroup">
+
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <button class="h-full bg-hovers px-2 rounded-full hidden md:block">
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.4286 10.7143C14.4286 12.1371 13.28 13.2857 11.8571 13.2857C10.4343 13.2857 9.28571 12.1371 9.28571 10.7143V5.57143C9.28571 4.14857 10.4343 3 11.8571 3C13.28 3 14.4286 4.14857 14.4286 5.57143V10.7143Z"
+                        fill="currentColor" />
+                    <path
+                        d="M17.8571 10.7143H16.4C16.4 13.2857 14.2229 15.0857 11.8571 15.0857C9.49143 15.0857 7.31429 13.2857 7.31429 10.7143H5.85714C5.85714 13.6371 8.18857 16.0543 11 16.4743V19.2857L5 19.2857V21H18.7143V19.2857L12 19.2857V16.4743C15.5257 16.0543 17.8571 13.6371 17.8571 10.7143Z"
+                        fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="h-10 flex items-center justify-center gap-3 lg:gap-5">
+            <button class=" items-center justify-center hidden xs:flex gap-1 py-2 px-4 rounded-full bg-hovers">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H13V3Z"
+                        fill="currentColor" />
+                </svg>
+                Create
+            </button>
+            <button class="hovers py-2 px-2 rounded-full hidden lg:block">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_15_159)">
+                        <rect width="24" height="24" />
+                        <path
+                            d="M9.5 19C8.89555 19 7.01237 19 5.61714 19C4.87375 19 4.39116 18.2177 4.72361 17.5528L5.57771 15.8446C5.85542 15.2892 6 14.6774 6 14.0564C6 13.2867 6 12.1434 6 11C6 9 7 5 12 5C17 5 18 9 18 11C18 12.1434 18 13.2867 18 14.0564C18 14.6774 18.1446 15.2892 18.4223 15.8446L19.2764 17.5528C19.6088 18.2177 19.1253 19 18.382 19H14.5M9.5 19C9.5 21 10.5 22 12 22C13.5 22 14.5 21 14.5 19M9.5 19C11.0621 19 14.5 19 14.5 19"
+                            stroke="currentColor" stroke-linejoin="round" />
+                        <path d="M12 5V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_15_159">
+                            <rect width="24" height="24" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+
+            <button class="hovers py-2 px-2 rounded-full md:hidden" (click)="handleShowSearch(true)">
+                <svg class="h-5 w-5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-256.000000, -1139.000000)"
+                            fill="currentColor">
+                            <path
+                                d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z"
+                                id="search" sketch:type="MSShapeGroup">
+
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+            </button>
+            <button class="bg-hovers px-2 py-2 rounded-full md:hidden">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.4286 10.7143C14.4286 12.1371 13.28 13.2857 11.8571 13.2857C10.4343 13.2857 9.28571 12.1371 9.28571 10.7143V5.57143C9.28571 4.14857 10.4343 3 11.8571 3C13.28 3 14.4286 4.14857 14.4286 5.57143V10.7143Z"
+                        fill="currentColor" />
+                    <path
+                        d="M17.8571 10.7143H16.4C16.4 13.2857 14.2229 15.0857 11.8571 15.0857C9.49143 15.0857 7.31429 13.2857 7.31429 10.7143H5.85714C5.85714 13.6371 8.18857 16.0543 11 16.4743V19.2857L5 19.2857V21H18.7143V19.2857L12 19.2857V16.4743C15.5257 16.0543 17.8571 13.6371 17.8571 10.7143Z"
+                        fill="currentColor" />
+                </svg>
+            </button>
+
+
+            <div class="flex items-center justify-center h-8 w-8 rounded-full bg-green-600">
+
+            </div>
+
+        </div>
+        <!-- search modal-->
+
+        <div *ngIf="showSearch" class=" md:hidden dark:bg-gray-800 bg-gray-100 absolute top-0 left-0 h-14 w-full flex items-center px-3">
+            <div class="cursor-pointer  px-2 py-1 " (click)="handleShowSearch(false)">
+                <svg class="h-6 w-6" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" />
+                    <path fill="currentColor"
+                        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z" />
+                </svg>
+
+            </div>
+
+            <div class="items-center w-full justify-center h-10 gap-3  flex ">
+                <div class="flex items-center justify-center h-full  w-full ">
+                    <input class=" w-[80%]  z-10   rounded-s-full bg-transparent  h-full border border-gray-900 ps-5"
+                        placeholder="Search" />
+                    <button title="Search"
+                        class="dark:bg-gray-900  bg-gray-200 h-full justify-center border border-gray-900 flex items-center rounded-e-full w-[70px]">
+    
+                        <svg class="h-5 w-5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                sketch:type="MSPage">
+                                <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-256.000000, -1139.000000)"
+                                    fill="currentColor">
+                                    <path
+                                        d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z"
+                                        id="search" sketch:type="MSShapeGroup">
+    
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <button class="h-full bg-hovers px-2 rounded-full ">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.4286 10.7143C14.4286 12.1371 13.28 13.2857 11.8571 13.2857C10.4343 13.2857 9.28571 12.1371 9.28571 10.7143V5.57143C9.28571 4.14857 10.4343 3 11.8571 3C13.28 3 14.4286 4.14857 14.4286 5.57143V10.7143Z"
+                            fill="currentColor" />
+                        <path
+                            d="M17.8571 10.7143H16.4C16.4 13.2857 14.2229 15.0857 11.8571 15.0857C9.49143 15.0857 7.31429 13.2857 7.31429 10.7143H5.85714C5.85714 13.6371 8.18857 16.0543 11 16.4743V19.2857L5 19.2857V21H18.7143V19.2857L12 19.2857V16.4743C15.5257 16.0543 17.8571 13.6371 17.8571 10.7143Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+</header>
+<main class="  h-[92vh] max-w-full flex  justify-between px-5 gap-3">
+    <aside id="sidebar" class="w-[15%]  overflow-x-hidden overflow-y-scroll transition-all duration-500">
+
+    </aside>
+    <div class="w-full  overflow-x-hidden overflow-y-scroll">
+
+
+    </div>
+</main>
