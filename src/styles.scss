@@ -4,7 +4,12 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
+}
+
+#list-home::-webkit-scrollbar {
+    width: 0px;
+    height:0px
 }
 
 
@@ -13,7 +18,7 @@
 }
 
 html {
-    @apply dark:text-white text-black dark:bg-black
+    @apply dark:text-white text-black dark:bg-gray-950
 }
 
 
@@ -36,4 +41,9 @@ html {
 .active-link {
     @apply dark:bg-gray-700 bg-gray-200
 }
+
+.background {
+    @apply dark:bg-gray-950 bg-white
+}
+
 

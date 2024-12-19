@@ -1,4 +1,4 @@
-<header class="  sticky top-0 dark:bg-black bg-white">
+<header class="  sticky top-0 ">
     <nav class="flex items-center justify-between py-2 px-5 relative ">
         <div class="flex gap-3 sm:gap-5 ">
             <svg class=" h-7 w-7" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
@@ -26,14 +26,13 @@
                 <button title="Search"
                     class="dark:bg-gray-900  bg-gray-100 h-full justify-center borders1 flex items-center rounded-e-full w-[70px]">
 
-                    <svg class="h-5 w-5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                        <path
-                            d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z"
-                            id="search" sketch:type="MSShapeGroup">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
+                        <path
+                            d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         </path>
+
                     </svg>
                 </button>
             </div>
@@ -75,15 +74,10 @@
             </button>
 
             <button class="hovers py-2 px-2 rounded-full md:hidden" (click)="handleShowSearch(true)">
-                <svg class="h-5 w-5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z"
-                        id="search" sketch:type="MSShapeGroup">
-
-                    </path>
-
+                        d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
 
             </button>
@@ -154,14 +148,16 @@
 
 <main class="  h-[92vh] max-w-full flex  justify-between px-5 gap-3">
     <aside id="sidebar" class="w-[20%]   overflow-x-hidden overflow-y-scroll transition-all duration-500 py-1 px-1">
-        <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z"
                     fill="currentColor" />
             </svg>
             Home
         </a>
-        <a routerLink="reels" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="reels" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M19.5617 7C19.7904 5.69523 18.7863 4.5 17.4617 4.5H6.53788C5.21323 4.5 4.20922 5.69523 4.43784 7"
@@ -178,7 +174,8 @@
             </svg>
             Shorts
         </a>
-        <a routerLink="subscription" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="subscription" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
                 <path d="M12 6V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -199,7 +196,8 @@
             </svg>
         </a>
 
-        <a routerLink="history" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="history" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M5.07868 5.06891C8.87402 1.27893 15.0437 1.31923 18.8622 5.13778C22.6824 8.95797 22.7211 15.1313 18.9262 18.9262C15.1312 22.7211 8.95793 22.6824 5.13774 18.8622C2.87389 16.5984 1.93904 13.5099 2.34047 10.5812C2.39672 10.1708 2.775 9.88377 3.18537 9.94002C3.59575 9.99627 3.88282 10.3745 3.82658 10.7849C3.4866 13.2652 4.27782 15.881 6.1984 17.8016C9.44288 21.0461 14.6664 21.0646 17.8655 17.8655C21.0646 14.6664 21.046 9.44292 17.8015 6.19844C14.5587 2.95561 9.33889 2.93539 6.13935 6.12957L6.88705 6.13333C7.30126 6.13541 7.63535 6.47288 7.63327 6.88709C7.63119 7.3013 7.29372 7.63539 6.87951 7.63331L4.33396 7.62052C3.92269 7.61845 3.58981 7.28556 3.58774 6.8743L3.57495 4.32874C3.57286 3.91454 3.90696 3.57707 4.32117 3.57498C4.73538 3.5729 5.07285 3.907 5.07493 4.32121L5.07868 5.06891Z"
@@ -210,7 +208,8 @@
             </svg>
             History
         </a>
-        <a routerLink="playlists" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="playlists" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 17.5L18.5 20V15L22 17.5Z" fill="#000000" stroke="currentColor" stroke-width="1.5"
                     stroke-linecap="round" stroke-linejoin="round" />
@@ -223,14 +222,16 @@
             </svg>
             Playlists
         </a>
-        <a routerLink="your-videos" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="your-videos" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2H0V14H16V2ZM6.5 5V11H7.5L11 8L7.5 5H6.5Z"
                     fill="currentColor" />
             </svg>
             Your videos
         </a>
-        <a routerLink="watch-list" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="watch-list" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg width="20px" height="20px" viewBox="-102.4 -102.4 1228.80 1228.80" class="icon" version="1.1"
                 xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)">
 
@@ -243,7 +244,8 @@
             </svg>
             Watch later
         </a>
-        <a routerLink="liked-video" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="liked-video" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L13.1956 3.93847C13.6886 3.3633 14.4642 3.11604 15.1992 3.29977L15.2467 3.31166C16.5885 3.64711 17.1929 5.21057 16.4258 6.36135L14 9.99998H18.5604C19.8225 9.99998 20.7691 11.1546 20.5216 12.3922L19.3216 18.3922C19.1346 19.3271 18.3138 20 17.3604 20L8 20"
@@ -251,7 +253,8 @@
             </svg>
             Liked video
         </a>
-        <a routerLink="your-clips" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="your-clips" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M10.2361 8C10.7111 7.46924 11 6.76835 11 6C11 4.34315 9.65685 3 8 3C6.34315 3 5 4.34315 5 6C5 7.65685 6.34315 9 8 9C8.8885 9 9.68679 8.61375 10.2361 8ZM10.2361 8L20 16"
@@ -464,7 +467,7 @@
         <hr class="border-gray-700 my-3" />
         <div class="flex-wrap flex w-full pb-5 ">
 
-            <p class="px-2" *ngFor="let item of footerLinks" [routerLink]="item.path">{{item.title}}</p>
+            <p class="px-3 text-sm" *ngFor="let item of footerLinks" [routerLink]="item.path">{{item.title}}</p>
         </div>
 
     </aside>
