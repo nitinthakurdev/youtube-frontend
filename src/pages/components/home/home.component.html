@@ -8,14 +8,17 @@
             </span>
         </div>
 
-        <div (click)="ScrollRight()" [ngClass]="{'hidden':listScrollAmount <= 0}" class="absolute top-2 left-0 w-[5%]  cursor-pointer bg-gradient-to-r dark:from-gray-900 from-white from-70%">
+        <div (click)="ScrollRight()" [ngClass]="{'hidden':listScrollAmount <= 0}"
+            class="absolute top-2 left-0 w-[5%]  cursor-pointer bg-gradient-to-r dark:from-gray-900 from-white from-70%">
             <svg class="h-8 w-8 rounded-full hovers" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 7L10 12L15 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round"></path>
             </svg>
         </div>
-        <div (click)="ScrollLeft()" [ngClass]="{'hidden':listScrollAmount === lastScrollingValue}" class="absolute top-2 right-0 w-[5%]   cursor-pointer bg-gradient-to-l dark:from-gray-900 from-white from-70%">
-            <svg class="h-8 w-8  rounded-full hovers" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div (click)="ScrollLeft()" [ngClass]="{'hidden':listScrollAmount === lastScrollingValue}"
+            class="absolute top-2 right-0 w-[5%]   cursor-pointer bg-gradient-to-l dark:from-gray-900 from-white from-70%">
+            <svg class="h-8 w-8  rounded-full hovers" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round"></path>
             </svg>
@@ -24,6 +27,163 @@
 </section>
 
 
-<section class="h-screen bg-gray-600">
-    hii
+<section class="min-h-screen px-2 py-3">
+    <div class="h-full w-full grid grid-cols-3 gap-5">
+        <div class="h-fit py-2">
+            <img class="rounded-xl"
+                src="https://i.ytimg.com/vi/l4_B0YlU8-I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCk4VjqiHtnEkMFeL-riL-ig_CpGQ"
+                alt="thumbnail" />
+            <div class="flex  justify-between px-2 h-full pt-3 gap-3">
+                <p class="text-xl font-medium flex-wrap">this is the title and subject of this video this is the ...</p>
+                <span>
+                    <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14C6 12.8954 6.89543 12 8 12Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10 2C10 0.89543 9.10457 -4.82823e-08 8 0C6.89543 4.82823e-08 6 0.895431 6 2C6 3.10457 6.89543 4 8 4C9.10457 4 10 3.10457 10 2Z"
+                                fill="currentColor"></path>
+                    </svg>
+                </span>
+                
+            </div>
+            <div class="px-2">
+                <h3>channal name</h3>
+                <p><span>63k views </span><span>. 1 year ago</span></p>
+            </div>
+        </div>
+        <div class="h-fit py-2">
+            <img class="rounded-xl"
+                src="https://i.ytimg.com/vi/l4_B0YlU8-I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCk4VjqiHtnEkMFeL-riL-ig_CpGQ"
+                alt="thumbnail" />
+            <div class="flex  justify-between px-2 h-full pt-3 gap-3">
+                <p class="text-xl font-medium flex-wrap">this is the title and subject of this video this is the ...</p>
+                <span>
+                    <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14C6 12.8954 6.89543 12 8 12Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10 2C10 0.89543 9.10457 -4.82823e-08 8 0C6.89543 4.82823e-08 6 0.895431 6 2C6 3.10457 6.89543 4 8 4C9.10457 4 10 3.10457 10 2Z"
+                                fill="currentColor"></path>
+                    </svg>
+                </span>
+                
+            </div>
+            <div class="px-2">
+                <h3>channal name</h3>
+                <p><span>63k views </span><span>. 1 year ago</span></p>
+            </div>
+        </div>
+        <div class="h-fit py-2">
+            <img class="rounded-xl"
+                src="https://i.ytimg.com/vi/l4_B0YlU8-I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCk4VjqiHtnEkMFeL-riL-ig_CpGQ"
+                alt="thumbnail" />
+            <div class="flex  justify-between px-2 h-full pt-3 gap-3">
+                <p class="text-xl font-medium flex-wrap">this is the title and subject of this video this is the ...</p>
+                <span>
+                    <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14C6 12.8954 6.89543 12 8 12Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10 2C10 0.89543 9.10457 -4.82823e-08 8 0C6.89543 4.82823e-08 6 0.895431 6 2C6 3.10457 6.89543 4 8 4C9.10457 4 10 3.10457 10 2Z"
+                                fill="currentColor"></path>
+                    </svg>
+                </span>
+                
+            </div>
+            <div class="px-2">
+                <h3>channal name</h3>
+                <p><span>63k views </span><span>. 1 year ago</span></p>
+            </div>
+        </div>
+        <div class="h-fit py-2">
+            <img class="rounded-xl"
+                src="https://i.ytimg.com/vi/l4_B0YlU8-I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCk4VjqiHtnEkMFeL-riL-ig_CpGQ"
+                alt="thumbnail" />
+            <div class="flex  justify-between px-2 h-full pt-3 gap-3">
+                <p class="text-xl font-medium flex-wrap">this is the title and subject of this video this is the ...</p>
+                <span>
+                    <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14C6 12.8954 6.89543 12 8 12Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10 2C10 0.89543 9.10457 -4.82823e-08 8 0C6.89543 4.82823e-08 6 0.895431 6 2C6 3.10457 6.89543 4 8 4C9.10457 4 10 3.10457 10 2Z"
+                                fill="currentColor"></path>
+                    </svg>
+                </span>
+                
+            </div>
+            <div class="px-2">
+                <h3>channal name</h3>
+                <p><span>63k views </span><span>. 1 year ago</span></p>
+            </div>
+        </div>
+        <div class="h-fit py-2">
+            <img class="rounded-xl"
+                src="https://i.ytimg.com/vi/l4_B0YlU8-I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCk4VjqiHtnEkMFeL-riL-ig_CpGQ"
+                alt="thumbnail" />
+            <div class="flex  justify-between px-2 h-full pt-3 gap-3">
+                <p class="text-xl font-medium flex-wrap">this is the title and subject of this video this is the ...</p>
+                <span>
+                    <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14C6 12.8954 6.89543 12 8 12Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10 2C10 0.89543 9.10457 -4.82823e-08 8 0C6.89543 4.82823e-08 6 0.895431 6 2C6 3.10457 6.89543 4 8 4C9.10457 4 10 3.10457 10 2Z"
+                                fill="currentColor"></path>
+                    </svg>
+                </span>
+                
+            </div>
+            <div class="px-2">
+                <h3>channal name</h3>
+                <p><span>63k views </span><span>. 1 year ago</span></p>
+            </div>
+        </div>
+        <div class="h-fit py-2">
+            <img class="rounded-xl"
+                src="https://i.ytimg.com/vi/l4_B0YlU8-I/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCk4VjqiHtnEkMFeL-riL-ig_CpGQ"
+                alt="thumbnail" />
+            <div class="flex  justify-between px-2 h-full pt-3 gap-3">
+                <p class="text-xl font-medium flex-wrap">this is the title and subject of this video this is the ...</p>
+                <span>
+                    <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14C6 12.8954 6.89543 12 8 12Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10 2C10 0.89543 9.10457 -4.82823e-08 8 0C6.89543 4.82823e-08 6 0.895431 6 2C6 3.10457 6.89543 4 8 4C9.10457 4 10 3.10457 10 2Z"
+                                fill="currentColor"></path>
+                    </svg>
+                </span>
+                
+            </div>
+            <div class="px-2">
+                <h3>channal name</h3>
+                <p><span>63k views </span><span>. 1 year ago</span></p>
+            </div>
+        </div>
+    </div>
 </section>

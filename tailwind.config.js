@@ -2,7 +2,6 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
-    "./public/**/*.{svg}",
   ],
   theme: {
     screens:{
