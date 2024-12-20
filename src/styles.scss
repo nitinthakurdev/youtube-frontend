@@ -9,11 +9,11 @@
 
 #list-home::-webkit-scrollbar {
     width: 0px;
-    height:0px
+    height: 0px
 }
 
 
-:hover::-webkit-scrollbar-thumb{
+:hover::-webkit-scrollbar-thumb {
     @apply bg-gray-500 rounded-full
 }
 
@@ -31,7 +31,7 @@ html {
 }
 
 .bg-hovers {
-    @apply dark:bg-gray-800 bg-gray-100 dark:hover:bg-gray-700 hover:bg-gray-200 
+    @apply dark:bg-gray-800 bg-gray-100 dark:hover:bg-gray-700 hover:bg-gray-200
 }
 
 .hovers {
@@ -46,4 +46,10 @@ html {
     @apply dark:bg-gray-950 bg-white
 }
 
+.side-show {
+    @apply hovers flex md:flex-col lg:flex-row lg:flex items-center px-3 gap-4 md:gap-1 lg:gap-4 py-2 w-full rounded-lg md:text-sm lg:font-medium
+}
 
+.side-show-hide {
+    @apply hovers flex items-center px-3 gap-4 py-2 w-full rounded-lg font-medium md:hidden lg:flex
+}

@@ -1,7 +1,7 @@
 <header class="  sticky top-0 ">
     <nav class="flex items-center justify-between py-2 px-5 relative ">
         <div class="flex gap-3 sm:gap-5 ">
-            <svg class=" h-7 w-7" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+            <svg (click)="handleShowSideBar()" class=" h-7 w-7" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M20.75 7C20.75 7.41421 20.4142 7.75 20 7.75L4 7.75C3.58579 7.75 3.25 7.41421 3.25 7C3.25 6.58579 3.58579 6.25 4 6.25L20 6.25C20.4142 6.25 20.75 6.58579 20.75 7Z"
@@ -146,18 +146,18 @@
     </nav>
 </header>
 
-<main class="  h-[92vh] max-w-full flex  justify-between px-5 gap-3">
-    <aside id="sidebar" class="w-[20%]   overflow-x-hidden overflow-y-scroll transition-all duration-500 py-1 px-1">
-        <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+<main class="  h-[92vh] max-w-full flex  justify-between px-5 gap-3 relative overflow-hidden">
+    <aside  id="sidebar" [ngClass]="{'left-2 md:w-64':showSidebar}" class=" w-48 md:w-16 lg:w-[20%] absolute -left-48  z-10 background  md:static  overflow-x-hidden overflow-y-scroll transition-all duration-500 py-1 px-1">
+        <a routerLink="" [ngClass]="{'md:flex-row md:text-base md:font-medium md:gap-4':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show ">
             <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z"
                     fill="currentColor" />
             </svg>
             Home
         </a>
-        <a routerLink="reels" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="reels" [ngClass]="{'md:flex-row md:text-base md:font-medium md:gap-4':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class="side-show">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M19.5617 7C19.7904 5.69523 18.7863 4.5 17.4617 4.5H6.53788C5.21323 4.5 4.20922 5.69523 4.43784 7"
@@ -174,8 +174,8 @@
             </svg>
             Shorts
         </a>
-        <a routerLink="subscription" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="subscription" [ngClass]="{'md:flex':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show-hide ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
                 <path d="M12 6V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -186,9 +186,9 @@
             Subscription
         </a>
 
-        <hr class="border-gray-700 my-3" />
+        <hr class="border-gray-700 my-3 md:hidden lg:block" />
 
-        <a routerLink="" class=" hovers flex items-center px-3  gap-2 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             You
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -196,8 +196,8 @@
             </svg>
         </a>
 
-        <a routerLink="history" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="history" [ngClass]="{'md:flex-row md:text-base md:font-medium md:gap-4':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M5.07868 5.06891C8.87402 1.27893 15.0437 1.31923 18.8622 5.13778C22.6824 8.95797 22.7211 15.1313 18.9262 18.9262C15.1312 22.7211 8.95793 22.6824 5.13774 18.8622C2.87389 16.5984 1.93904 13.5099 2.34047 10.5812C2.39672 10.1708 2.775 9.88377 3.18537 9.94002C3.59575 9.99627 3.88282 10.3745 3.82658 10.7849C3.4866 13.2652 4.27782 15.881 6.1984 17.8016C9.44288 21.0461 14.6664 21.0646 17.8655 17.8655C21.0646 14.6664 21.046 9.44292 17.8015 6.19844C14.5587 2.95561 9.33889 2.93539 6.13935 6.12957L6.88705 6.13333C7.30126 6.13541 7.63535 6.47288 7.63327 6.88709C7.63119 7.3013 7.29372 7.63539 6.87951 7.63331L4.33396 7.62052C3.92269 7.61845 3.58981 7.28556 3.58774 6.8743L3.57495 4.32874C3.57286 3.91454 3.90696 3.57707 4.32117 3.57498C4.73538 3.5729 5.07285 3.907 5.07493 4.32121L5.07868 5.06891Z"
@@ -208,8 +208,8 @@
             </svg>
             History
         </a>
-        <a routerLink="playlists" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="playlists" [ngClass]="{'md:flex-row md:text-base md:font-medium md:gap-4':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 17.5L18.5 20V15L22 17.5Z" fill="#000000" stroke="currentColor" stroke-width="1.5"
                     stroke-linecap="round" stroke-linejoin="round" />
@@ -222,16 +222,16 @@
             </svg>
             Playlists
         </a>
-        <a routerLink="your-videos" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="your-videos" [ngClass]="{'md:flex':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2H0V14H16V2ZM6.5 5V11H7.5L11 8L7.5 5H6.5Z"
                     fill="currentColor" />
             </svg>
             Your videos
         </a>
-        <a routerLink="watch-list" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="watch-list" [ngClass]="{'md:flex':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show-hide">
             <svg width="20px" height="20px" viewBox="-102.4 -102.4 1228.80 1228.80" class="icon" version="1.1"
                 xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)">
 
@@ -244,8 +244,8 @@
             </svg>
             Watch later
         </a>
-        <a routerLink="liked-video" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="liked-video" [ngClass]="{'md:flex':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L13.1956 3.93847C13.6886 3.3633 14.4642 3.11604 15.1992 3.29977L15.2467 3.31166C16.5885 3.64711 17.1929 5.21057 16.4258 6.36135L14 9.99998H18.5604C19.8225 9.99998 20.7691 11.1546 20.5216 12.3922L19.3216 18.3922C19.1346 19.3271 18.3138 20 17.3604 20L8 20"
@@ -253,8 +253,8 @@
             </svg>
             Liked video
         </a>
-        <a routerLink="your-clips" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-            class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="your-clips" [ngClass]="{'md:flex':showSidebar}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M10.2361 8C10.7111 7.46924 11 6.76835 11 6C11 4.34315 9.65685 3 8 3C6.34315 3 5 4.34315 5 6C5 7.65685 6.34315 9 8 9C8.8885 9 9.68679 8.61375 10.2361 8ZM10.2361 8L20 16"
@@ -266,10 +266,10 @@
             Your clips
         </a>
 
-        <hr class="border-gray-700 my-3" />
+        <hr class="border-gray-700 my-3 md:hidden lg:block" />
 
-        <h2 class="text-lg font-medium mb-2">Explore</h2>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <h2 class="text-lg font-medium mb-2 md:hidden lg:block">Explore</h2>
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg fill="currentColor" class="h-5 w-5" viewBox="0 0 32 32" version="1.1"
                 xmlns="http://www.w3.org/2000/svg">
 
@@ -280,7 +280,7 @@
             </svg>
             Trending
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 <path
@@ -294,7 +294,7 @@
             </svg>
             Shopping
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 <path
@@ -304,7 +304,7 @@
             </svg>
             Music
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
                 <path
@@ -314,7 +314,7 @@
             </svg>
             Movies
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
                 <path
@@ -323,7 +323,7 @@
             </svg>
             Live
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M6.00014 11H10.0001M8.00014 9V13M15.0001 12H15.0101M18.0001 10H18.0101M10.4491 5H13.5512C16.1761 5 17.4885 5 18.5187 5.49743C19.4257 5.9354 20.1793 6.63709 20.6808 7.51059C21.2503 8.5027 21.3438 9.81181 21.5309 12.43L21.7769 15.8745C21.8975 17.5634 20.5599 19 18.8667 19C18.0008 19 17.1796 18.6154 16.6253 17.9502L16.2501 17.5C15.907 17.0882 15.7354 16.8823 15.54 16.7159C15.1305 16.3672 14.6346 16.1349 14.1045 16.0436C13.8516 16 13.5836 16 13.0476 16H10.9527C10.4167 16 10.1487 16 9.89577 16.0436C9.36563 16.1349 8.86981 16.3672 8.46024 16.7159C8.26487 16.8823 8.09329 17.0882 7.75013 17.5L7.37497 17.9502C6.82064 18.6154 5.99949 19 5.13359 19C3.44037 19 2.10275 17.5634 2.22339 15.8745L2.46942 12.43C2.65644 9.81181 2.74994 8.5027 3.31951 7.51059C3.82098 6.63709 4.57458 5.9354 5.48159 5.49743C6.51176 5 7.8242 5 10.4491 5Z"
@@ -331,7 +331,7 @@
             </svg>
             Gaming
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1"
                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 fill="#000000">
@@ -359,7 +359,7 @@
             </svg>
             News
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M12.0002 16C6.24021 16 5.21983 10.2595 5.03907 5.70647C4.98879 4.43998 4.96365 3.80673 5.43937 3.22083C5.91508 2.63494 6.48445 2.53887 7.62318 2.34674C8.74724 2.15709 10.2166 2 12.0002 2C13.7837 2 15.2531 2.15709 16.3771 2.34674C17.5159 2.53887 18.0852 2.63494 18.5609 3.22083C19.0367 3.80673 19.0115 4.43998 18.9612 5.70647C18.7805 10.2595 17.7601 16 12.0002 16Z"
@@ -381,7 +381,7 @@
             </svg>
             Sports
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg fill="currentColor" class="h-5 w-5" version="1.2" baseProfile="tiny" id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-25 8 203.4 242"
                 xml:space="preserve">
@@ -391,7 +391,7 @@
             </svg>
             Courses
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg fill="currentColor" class="h-5 w-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M13.68,3.79a1.77,1.77,0,0,1-3.37,0l-.73-2.2L2,5.38V12H5V22H19V12h3V5.38L14.42,1.59Zm1.9.63h0L20,6.62V10H17V20H7V10H4V6.62L8.42,4.41h0a3.77,3.77,0,0,0,7.16,0Z">
@@ -400,7 +400,7 @@
             </svg>
             fashion & Beauty
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg fill="currentColor" class="h-5 w-5" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 575.793 575.793" xml:space="preserve">
 
@@ -417,9 +417,9 @@
             Podcasts
         </a>
 
-        <hr class="border-gray-700 my-3" />
+        <hr class="border-gray-700 my-3 md:hidden lg:block" />
 
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" [ngClass]="{'md:flex-row md:text-base md:font-medium md:gap-4':showSidebar}" class=" side-show ">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M12 8.25C9.92894 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92894 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"
@@ -430,7 +430,7 @@
             </svg>
             Settings
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M4 1C3.44772 1 3 1.44772 3 2V22C3 22.5523 3.44772 23 4 23C4.55228 23 5 22.5523 5 22V13.5983C5.46602 13.3663 6.20273 13.0429 6.99251 12.8455C8.40911 12.4914 9.54598 12.6221 10.168 13.555C11.329 15.2964 13.5462 15.4498 15.2526 15.2798C17.0533 15.1004 18.8348 14.5107 19.7354 14.1776C20.5267 13.885 21 13.1336 21 12.3408V5.72337C21 4.17197 19.3578 3.26624 18.0489 3.85981C16.9875 4.34118 15.5774 4.87875 14.3031 5.0563C12.9699 5.24207 12.1956 4.9907 11.832 4.44544C10.5201 2.47763 8.27558 2.24466 6.66694 2.37871C6.0494 2.43018 5.47559 2.53816 5 2.65249V2C5 1.44772 4.55228 1 4 1ZM5 4.72107V11.4047C5.44083 11.2247 5.95616 11.043 6.50747 10.9052C8.09087 10.5094 10.454 10.3787 11.832 12.4455C12.3106 13.1634 13.4135 13.4531 15.0543 13.2897C16.5758 13.1381 18.1422 12.6321 19 12.3172V5.72337C19 5.67794 18.9081 5.66623 18.875 5.68126C17.7575 6.18804 16.1396 6.81972 14.5791 7.03716C13.0776 7.24639 11.2104 7.1185 10.168 5.55488C9.47989 4.52284 8.2244 4.25586 6.83304 4.3718C6.12405 4.43089 5.46427 4.58626 5 4.72107Z"
@@ -438,7 +438,7 @@
             </svg>
             Report history
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
@@ -452,7 +452,7 @@
             </svg>
             Help
         </a>
-        <a routerLink="" class=" hovers flex items-center px-3  gap-4 py-2 w-full rounded-lg font-medium ">
+        <a routerLink="" [ngClass]="{'md:flex':showSidebar}" class=" side-show-hide">
             <svg class="h-5 w-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000">
 
                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -464,8 +464,8 @@
             Send feedback
         </a>
 
-        <hr class="border-gray-700 my-3" />
-        <div class="flex-wrap flex w-full pb-5 ">
+        <hr class="border-gray-700 my-3 md:hidden lg:block" />
+        <div [ngClass]="{'md:flex':showSidebar}" class="flex-wrap flex w-full pb-5 md:hidden lg:flex ">
 
             <p class="px-3 text-sm" *ngFor="let item of footerLinks" [routerLink]="item.path">{{item.title}}</p>
         </div>

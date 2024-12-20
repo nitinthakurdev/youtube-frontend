@@ -1,16 +1,17 @@
-import {NgFor, NgIf } from '@angular/common';
+import {NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [NgIf,RouterLink,RouterLinkActive,NgFor,RouterOutlet],
+  imports: [NgIf,RouterLink,RouterLinkActive,NgFor,RouterOutlet,NgClass],
   templateUrl: './layout.component.html',
   styles: ``
 })
 export class LayoutComponent {
   showSearch:boolean= false
+  showSidebar:boolean = false
 
   handleShowSearch (x:boolean) {
     this.showSearch = x
@@ -26,5 +27,8 @@ export class LayoutComponent {
     {path:"",title:"Developers"},
   ]
   
+  handleShowSideBar(){
+    this.showSidebar = !this.showSidebar
+  }
 
 }
