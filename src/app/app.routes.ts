@@ -45,6 +45,10 @@ export const routes: Routes = [
                 path:"your-videos",
                 loadComponent:()=>import("../pages/components/yourvideo/yourvideo.component").then(e => e.YourvideoComponent)
             },
+            {
+                path:"profile",
+                loadComponent:()=>import("../pages/components/profile/profile.component").then(e => e.ProfileComponent)
+            },
         ]
     },
 ];
